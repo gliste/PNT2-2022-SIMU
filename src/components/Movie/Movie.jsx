@@ -1,9 +1,11 @@
 import './App.css';
 import { useState } from 'react';
+import {Link} from 'react-router-dom'
 
 
 const Movie = (props) => {
-
+    const [constador, setContador] = useState(0); 
+    
     return (
         <li>
             <div>
