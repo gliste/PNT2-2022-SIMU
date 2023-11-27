@@ -1,25 +1,21 @@
-import './App.css';
-import { useState } from 'react';
-import {Link} from 'react-router-dom'
-
+//import { Link } from "react-router-dom";
 
 const Movie = (props) => {
-    const [constador, setContador] = useState(0); 
-    
+   
     return (
         <li>
             <div>
-                <div>
-                    <img src={props.Picture} />
-                </div>
-                <div>
-                    <h2>{props.MovieName}</h2>
-                    <h3>{props.Description}</h3>
-                </div>
-
+               <img src = {props.Poster} alt={props.Title}/>
             </div>
-
-
+            <div>
+            <h2>{props.Title}</h2>
+            <h3>{props.Fullplot}</h3>
+            </div>
         </li>
     );
 };
+
+export default Movie;
+
+//El componente de pelicula debe mostrar la pelicula con su respectivo **poster**,
+//con el **title** debajo y la descripción **fullplot**

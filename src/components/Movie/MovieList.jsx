@@ -4,14 +4,13 @@ import Movie from "./Movie";
 export default function MovieList(props) {
     return (
         <ul >
-            {props.Movie.map(movie => {
+            {props.Movies.map(movie => {
                 return (
-                    <Movie
-                        Id={movie["_id"]}
-                        Picture={movie.poster}
-                        MovieName={movie.title}
-                        Description={movie.fullplot}
-
+                    <Movie 
+                    Id = {movie._id}
+                    Poster = {movie.poster}
+                    MovieName = {movie.title}
+                    Description = {movie.fullplot}
                     />
 
                 );
@@ -19,3 +18,5 @@ export default function MovieList(props) {
         </ul>
     );
 }
+
+
